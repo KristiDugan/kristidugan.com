@@ -1,0 +1,183 @@
+@import "_normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Nunito:300&display=swap");
+
+:root {
+	--main-text-color: #333;
+	--main-bg-color: #eee;
+	--color-purple: #6567c2;
+	--color-hot-pink: rgb(166, 71, 179);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Nunito", Helvetica, Arial, sans-serif;
+	color: var(--main-text-color);
+	font-weight: 300;
+	background-color: var(--main-bg-color);
+	background-image: linear-gradient(
+		to right,
+		rgba(255, 255, 255, 0),
+		#fff,
+		#fff,
+		#fff,
+		rgba(255, 255, 255, 0)
+	);
+}
+
+header {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+	padding: 20px;
+	background-color: var(--color-purple);
+	background-image: linear-gradient(
+		to bottom right,
+		rgb(124, 113, 172),
+		rgb(166, 71, 179)
+	);
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-hot-pink);
+}
+
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+
+header nav a {
+	margin-left: 15px;
+	color: #fff;
+}
+
+section {
+	display: flex;
+	min-height: 100vh;
+	padding: 60px 0;
+	justify-content: center;
+	align-items: center;
+}
+
+/* #intro {
+	min-height: 100vh;
+} */
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+h2 .web-dev {
+	display: inline-block;
+}
+
+p {
+	text-align: left;
+	line-height: 1.5rem;
+}
+
+footer p {
+	text-align: center;
+}
+
+.container {
+	text-align: center;
+	width: 80%;
+	max-width: 800px;
+}
+
+.project {
+	display: inline-block;
+	margin: 20px 30px;
+}
+
+.screenshot-container {
+	display: inline-block;
+	margin-top: 30px;
+	overflow: hidden;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+img.screenshot {
+	display: block;
+	width: 200px;
+	transition: transform 0.5s;
+}
+
+img.screenshot:hover {
+	transform: scale(1.1);
+}
+
+a.button {
+	display: block;
+	margin-top: 30px;
+}
+
+#about p img {
+	shape-outside: circle(50%);
+	border-radius: 50%;
+	margin-right: 20px;
+	float: left;
+	width: 150px;
+	height: 150px;
+}
+
+.icon {
+	font-size: 3rem;
+	margin: 20px 15px;
+}
+
+/* For larger screens */
+@media screen and (min-width: 600px) {
+	h1 {
+		font-size: 3.8rem;
+	}
+
+	#intro img {
+		width: 350px;
+	}
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #333;
+		background-image: radial-gradient(rgba(255, 255, 255, 0), #444);
+		background-attachment: fixed;
+		color: #ddd;
+	}
+
+	a {
+		color: #fff;
+	}
+
+	footer {
+		background-color: #111;
+		color: #ccc;
+	}
+}
