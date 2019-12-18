@@ -152,6 +152,36 @@ a.button {
 	margin: 20px 15px;
 }
 
+/* Form styles */
+form {
+	margin: 50px auto;
+	width: 25rem;
+}
+form label {
+	display: block;
+	width: 100%;
+	margin-top: 25px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+form input {
+	width: 100%;
+}
+
+textarea.message {
+	height: 6rem;
+	width: 100%;
+}
+
+button {
+	display: block;
+	margin: 15px auto;
+	padding: 0.6em 1em;
+	/* border-radius: 8px; */
+	cursor: pointer;
+}
+
 /* For larger screens */
 @media screen and (min-width: 600px) {
 	h1 {
