@@ -6,6 +6,11 @@
 	--main-bg-color: #eee;
 	--color-purple: #6567c2;
 	--color-hot-pink: rgb(166, 71, 179);
+	--gradient-purple-pink: linear-gradient(
+		to bottom right,
+		rgb(124, 113, 172),
+		rgb(166, 71, 179)
+	);
 }
 
 * {
@@ -40,11 +45,7 @@ header {
 	text-align: right;
 	padding: 20px;
 	background-color: var(--color-purple);
-	background-image: linear-gradient(
-		to bottom right,
-		rgb(124, 113, 172),
-		rgb(166, 71, 179)
-	);
+	background-image: var(--gradient-purple-pink);
 }
 
 a {
@@ -174,8 +175,10 @@ a.button {
 /* Form styles */
 form {
 	margin: 50px auto;
-	width: 25rem;
+	width: 100%;
+	max-width: 500px;
 }
+
 form label {
 	display: block;
 	width: 100%;
@@ -197,8 +200,15 @@ button {
 	display: block;
 	margin: 15px auto;
 	padding: 0.6em 1em;
-	/* border-radius: 8px; */
+	border-radius: 8px;
+	border: none;
 	cursor: pointer;
+	background-color: var(--color-hot-pink);
+	color: #fff;
+}
+
+button:hover {
+	background-image: var(--gradient-purple-pink);
 }
 
 /* For larger screens */
