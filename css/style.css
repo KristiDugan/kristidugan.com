@@ -147,9 +147,28 @@ a.button {
 	height: 150px;
 }
 
+#skills {
+	text-align: center;
+}
+
+#skills i {
+	margin: 0.7rem;
+	font-size: 2rem;
+}
+
 .icon {
 	font-size: 3rem;
 	margin: 20px 15px;
+}
+
+/* Screen reader only, not visible */
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	top: auto;
+	overflow: hidden;
 }
 
 /* Form styles */
