@@ -2,8 +2,12 @@ document.querySelector('.js-scroll-into-intro').addEventListener('click', functi
 	document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
 });
 
-document.querySelector('.js-scroll-into-projects').addEventListener('click', function() {
-	document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+const projectLinks = document.querySelectorAll('.js-scroll-into-projects');
+
+projectLinks.forEach((projectLink) => {
+	projectLink.addEventListener('click', function() {
+		document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+	});
 });
 
 document.querySelector('.js-scroll-into-about').addEventListener('click', function() {
