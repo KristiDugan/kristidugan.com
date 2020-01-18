@@ -59,8 +59,11 @@ a:active {
 }
 
 header nav a {
-	margin-left: 15px;
 	color: #fff;
+}
+
+header nav a:not(:first-of-type) {
+	margin-left: 15px;
 }
 
 section {
@@ -72,9 +75,9 @@ section {
 	flex-wrap: wrap;
 }
 
-/* #intro {
-	min-height: 100vh;
-} */
+#intro {
+	flex-direction: column;
+}
 
 footer {
 	background-color: #333;
@@ -111,7 +114,8 @@ footer p {
 	max-width: 1400px;
 }
 
-.project {
+.project,
+.article {
 	display: inline-block;
 	margin: 20px 10px;
 	width: min-content;
@@ -136,6 +140,11 @@ img.screenshot {
 
 img.screenshot:hover {
 	transform: scale(1.1);
+}
+
+.article img {
+	width: 300px;
+	margin: 0 -20px;
 }
 
 .tech-used {
@@ -189,14 +198,7 @@ a.button i {
 }
 
 /* Screen reader only, not visible */
-.sr-only {
-	position: absolute;
-	left: -10000px;
-	width: 1px;
-	height: 1px;
-	top: auto;
-	overflow: hidden;
-}
+/* .sr-only class supplied by fontawesome */
 
 /* Form styles */
 form {
@@ -238,6 +240,22 @@ button:hover {
 	background-color: var(--color-purple);
 }
 
+.back-to-top,
+.to-next-section {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.back-to-top a,
+.to-next-section a {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.to-next-section {
+	display: block;
+}
+
 /* For larger screens */
 @media screen and (min-width: 600px) {
 	h1 {
@@ -262,7 +280,8 @@ button:hover {
 		color: #fff;
 	}
 
-	.project {
+	.project,
+	.article {
 		background-color: #444;
 		border-color: #333;
 	}

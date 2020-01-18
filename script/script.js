@@ -14,6 +14,10 @@ document.querySelector('.js-scroll-into-about').addEventListener('click', functi
 	document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.querySelector('.js-scroll-into-articles').addEventListener('click', function() {
+	document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
+});
+
 document.querySelector('.js-scroll-into-contact').addEventListener('click', function() {
 	document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
 });
