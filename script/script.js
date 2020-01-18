@@ -1,23 +1,14 @@
-document.querySelector('.js-scroll-into-intro').addEventListener('click', function() {
-	document.querySelector('#intro').scrollIntoView({ behavior: 'smooth' });
-});
+const smoothScrollSections = ['intro', 'projects', 'about', 'articles', 'contact'];
 
-const projectLinks = document.querySelectorAll('.js-scroll-into-projects');
-
-projectLinks.forEach((projectLink) => {
-	projectLink.addEventListener('click', function() {
-		document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+function createSmoothScrollers(arr) {
+	arr.forEach(section => {
+		const sectionLinks = document.querySelectorAll(`.js-scroll-into-${section}`);
+		sectionLinks.forEach(sectionLink => {
+			sectionLink.addEventListener('click', function() {
+				document.querySelector(`#${section}`).scrollIntoView({ behavior: 'smooth' });
+			});
+		})
 	});
-});
+}
 
-document.querySelector('.js-scroll-into-about').addEventListener('click', function() {
-	document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.querySelector('.js-scroll-into-articles').addEventListener('click', function() {
-	document.querySelector('#articles').scrollIntoView({ behavior: 'smooth' });
-});
-
-document.querySelector('.js-scroll-into-contact').addEventListener('click', function() {
-	document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-});
+createSmoothScrollers(smoothScrollSections);
